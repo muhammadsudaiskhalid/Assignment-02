@@ -1,0 +1,40 @@
+# Large files
+*.pdf
+*.zip
+*.tar.gz
+
+# Generated outputs
+*.png
+*.jpg
+*.html
+tfidf_scatter_plot.png
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+venv/
+env/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
