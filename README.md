@@ -1,6 +1,6 @@
 # NLP Assignment: PDF Text Processing and Feature Extraction
 
-## 📚 Overview
+## Overview
 
 This project demonstrates Natural Language Processing (NLP) techniques applied to a PDF document. It covers text extraction, preprocessing, feature extraction, and visualization of NLP results.
 
@@ -14,7 +14,7 @@ This project demonstrates Natural Language Processing (NLP) techniques applied t
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Features](#features)
 2. [Prerequisites](#prerequisites)
@@ -23,11 +23,10 @@ This project demonstrates Natural Language Processing (NLP) techniques applied t
 5. [Project Structure](#project-structure)
 6. [Detailed Steps](#detailed-steps)
 7. [Output Results](#output-results)
-8. [Screenshots](#screenshots)
 
 ---
 
-## ✨ Features
+## Features
 
 ### Q1(a): PDF Reading and Text Extraction
 - Read PDF files using `pypdf` library
@@ -69,7 +68,7 @@ This project demonstrates Natural Language Processing (NLP) techniques applied t
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Make sure you have the following installed:
 - Python 3.7 or higher
@@ -78,7 +77,7 @@ Make sure you have the following installed:
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ### Step 1: Clone the Repository
 ```bash
@@ -109,18 +108,18 @@ python -m nltk.downloader stopwords punkt wordnet
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Run the Notebook
 
 #### Using Jupyter Notebook:
 ```bash
-jupyter notebook NLP_Assignment_Simple.ipynb
+jupyter notebook NLP_Assignment.ipynb
 ```
 
 #### Using JupyterLab:
 ```bash
-jupyter lab NLP_Assignment_Simple.ipynb
+jupyter lab NLP_Assignment.ipynb
 ```
 
 ### Run Cell by Cell:
@@ -136,31 +135,29 @@ jupyter lab NLP_Assignment_Simple.ipynb
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 NLP-PDF-Processing/
-│
+|
 ├── README.md                          # This file
 ├── requirements.txt                   # Required libraries
-├── NLP_Assignment_Simple.ipynb        # Main Jupyter notebook
-├── MachineLearningTomMitchell.pdf     # Source PDF file
+├── NLP_Assignment.ipynb              # Main Jupyter notebook
+├── MachineLearningTomMitchell.pdf    # Source PDF file
 ├── tfidf_scatter_plot.png            # Output visualization (generated)
-│
-└── outputs/                           # Output folder (optional)
-    └── results.txt                    # Summary results
+└── .gitignore                        # Git ignore file
 ```
 
 ---
 
-## 📊 Detailed Steps
+## Detailed Steps
 
 ### Step 1: PDF Reading (Q1a)
 ```
-✓ Read PDF file using PdfReader
-✓ Count total pages: 773
-✓ Extract 120 pages
-✓ Display sample text
+- Read PDF file using PdfReader
+- Count total pages: 773
+- Extract 120 pages
+- Display sample text
 ```
 
 **Output:**
@@ -174,14 +171,14 @@ Total characters extracted: 1,234,567
 
 | Preprocessing Step | Regex Pattern | Status |
 |---|---|---|
-| Lowercase conversion | - | ✓ Complete |
-| Remove numbers | `r'\d+'` | ✓ Complete |
-| Remove special symbols | `r'[^a-zA-Z\s]'` | ✓ Complete |
-| Remove extra spaces | `r'\s+'` | ✓ Complete |
-| Tokenization | - | ✓ Complete |
-| Stop word removal | - | ✓ Complete |
-| Stemming | Porter Stemmer | ✓ Complete |
-| Lemmatization | WordNet | ✓ Complete |
+| Lowercase conversion | - | Complete |
+| Remove numbers | `r'\d+'` | Complete |
+| Remove special symbols | `r'[^a-zA-Z\s]'` | Complete |
+| Remove extra spaces | `r'\s+'` | Complete |
+| Tokenization | - | Complete |
+| Stop word removal | - | Complete |
+| Stemming | Porter Stemmer | Complete |
+| Lemmatization | WordNet | Complete |
 
 **Output Sample:**
 ```
@@ -212,7 +209,7 @@ Valid words (after stop word removal): 33,333
 
 ---
 
-## 📈 Output Results
+## Output Results
 
 After running the complete notebook, you will get:
 
@@ -226,20 +223,20 @@ Stop words found: 12,345
 Valid words: 33,333
 
 Preprocessing:
-- Lowercase: ✓
-- Numbers removed: ✓
-- Special symbols removed: ✓
-- Extra spaces removed: ✓
-- Tokenization: ✓
-- Stop words removed: ✓
-- Stemming: ✓
-- Lemmatization: ✓
+- Lowercase: Complete
+- Numbers removed: Complete
+- Special symbols removed: Complete
+- Extra spaces removed: Complete
+- Tokenization: Complete
+- Stop words removed: Complete
+- Stemming: Complete
+- Lemmatization: Complete
 
 Feature Extraction:
-- One Hot Encoding: 50 chunks × 30 words
-- TF-IDF: 20 documents × 20 features
+- One Hot Encoding: 50 chunks x 30 words
+- TF-IDF: 20 documents x 20 features
 
-✓ ALL TASKS COMPLETED!
+ALL TASKS COMPLETED!
 ```
 
 ### 2. Generated Files
@@ -251,170 +248,55 @@ Feature Extraction:
 
 ---
 
-## 📸 Screenshots
-
-### Screenshot 1: PDF Reading Output
-```
-Total Pages in PDF: 773
-Pages to Extract: 120
-Total characters extracted: 1,234,567
-
-Sample Extracted Text (first 500 characters):
-================================================== 
-Chapter 1: Introduction to Machine Learning
-This book provides a comprehensive introduction to machine learning...
-```
-
-### Screenshot 2: Preprocessing Output
-```
-Step 1: Converting to lowercase...
-✓ Done
-
-Step 2: Removing numbers using Regex...
-Regex Pattern: \d+
-✓ Numbers removed
-
-Step 3: Removing special symbols using Regex...
-Regex Pattern: [^a-zA-Z\s]
-✓ Special symbols removed
-
-Step 4: Removing extra spaces using Regex...
-Regex Pattern: \s+
-✓ Extra spaces removed
-
-Step 5: Tokenizing text into words...
-✓ Total words: 45,678
-First 20 words: ['chapter', 'introduction', 'machine', 'learning', 'book'...]
-```
-
-### Screenshot 3: Stop Words Output
-```
-Step 6: Removing stop words...
-Stop words found: 12,345
-Valid words after removing stop words: 33,333
-First 20 valid words: ['machine', 'learning', 'algorithm', 'training'...]
-```
-
-### Screenshot 4: Stemming Examples
-```
-Step 7: Applying Stemming...
-Examples of stemming (word → stem):
-  machine → machin
-  learning → learn
-  training → train
-  algorithm → algorithm
-  processing → process
-```
-
-### Screenshot 5: Lemmatization Examples
-```
-Step 8: Applying Lemmatization...
-Examples of lemmatization (word → lemma):
-  machine → machine
-  learning → learning
-  training → training
-  algorithm → algorithm
-  processing → processing
-```
-
-### Screenshot 6: One-Hot Encoding Table
-```
-Feature Extraction 1: ONE HOT ENCODING
-
-One Hot Encoding Table (First 5 chunks):
-    algorithm  analysis  approach  ... training  validation
-0            0         1         0  ...        1           0
-1            1         0         0  ...        0           1
-2            0         1         1  ...        1           0
-3            1         0         1  ...        0           0
-4            0         0         0  ...        1           1
-```
-
-### Screenshot 7: TF-IDF Table
-```
-Feature Extraction 2: TF-IDF
-
-TF-IDF Values (Top Words by Average Score):
-                Word  TF-IDF Score
-        algorithm       0.3456
-          learning       0.3212
-          training       0.2987
-         validation       0.2654
-            machine       0.2345
-          prediction       0.2123
-```
-
-### Screenshot 8: Scatter Plot
-```
-[Scatter Plot Image showing TF-IDF scores]
-- Title: "TF-IDF Scores of Top Words"
-- X-axis: Word Index (0-20)
-- Y-axis: TF-IDF Score (0-0.4)
-- Points labeled with word names
-- Grid enabled for clarity
-```
-
----
-
-## 🔗 Important Links
-
-**PDF Source:**
-- Machine Learning by Tom Mitchell
-- Available in: `/MachineLearningTomMitchell.pdf`
-- Total Pages: 773
-- Extracted Pages: 120
-
----
-
-## 📝 Assignment Requirements
+## Assignment Requirements
 
 This project fulfills the following assignment requirements:
 
-- ✅ Q1(a): PDF Reading and Text Extraction
-  - Select PDF with minimum 100 pages ✓
-  - Read PDF file ✓
-  - Extract text from all pages ✓
-  - Show total pages ✓
-  - Show sample text ✓
+- All Q1(a): PDF Reading and Text Extraction
+  - PDF with minimum 100 pages
+  - Read PDF file
+  - Extract text from all pages
+  - Show total pages
+  - Show sample text
 
-- ✅ Q1(b): Text Preprocessing
-  - Convert to lowercase ✓
-  - Remove numbers (Regex) ✓
-  - Remove special symbols (Regex) ✓
-  - Remove extra spaces (Regex) ✓
-  - Remove punctuation ✓
-  - Tokenize words ✓
-  - Stop word removal ✓
-  - Show stop word count ✓
-  - Show valid word count ✓
-  - Apply stemming ✓
-  - Apply lemmatization ✓
+- All Q1(b): Text Preprocessing
+  - Convert to lowercase
+  - Remove numbers (Regex)
+  - Remove special symbols (Regex)
+  - Remove extra spaces (Regex)
+  - Remove punctuation
+  - Tokenize words
+  - Stop word removal
+  - Show stop word count
+  - Show valid word count
+  - Apply stemming
+  - Apply lemmatization
 
-- ✅ Q1(c): Feature Extraction
-  - One-Hot Encoding ✓
-  - Tabular output ✓
-  - TF-IDF ✓
-  - Feature names ✓
-  - Tabular output ✓
+- All Q1(c): Feature Extraction
+  - One-Hot Encoding
+  - Tabular output
+  - TF-IDF
+  - Feature names
+  - Tabular output
 
-- ✅ Q1(d): TF-IDF Visualization
-  - Scatter plot created ✓
-  - Proper title ✓
-  - X-axis label ✓
-  - Y-axis label ✓
-  - Word labels ✓
+- All Q1(d): TF-IDF Visualization
+  - Scatter plot created
+  - Proper title
+  - X-axis label
+  - Y-axis label
+  - Word labels
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
-### Issue: `ModuleNotFoundError: No module named 'pypdf'`
+### Issue: ModuleNotFoundError: No module named 'pypdf'
 **Solution:**
 ```bash
 pip install pypdf
 ```
 
-### Issue: `LookupError: NLTK data not found`
+### Issue: LookupError: NLTK data not found
 **Solution:**
 The notebook automatically downloads required data, or run:
 ```bash
@@ -436,7 +318,7 @@ pdf_path = r'd:\your\path\to\MachineLearningTomMitchell.pdf'
 
 ---
 
-## 📚 Libraries Used
+## Libraries Used
 
 | Library | Version | Purpose |
 |---------|---------|---------|
@@ -449,39 +331,24 @@ pdf_path = r'd:\your\path\to\MachineLearningTomMitchell.pdf'
 
 ---
 
-## 👤 Author
-
-**Student Assignment**
-- Course: NLP Lab
-- Semester: 06
-- Date: 2026
-
----
-
-## 📄 License
+## License
 
 This project is for educational purposes only.
 
 ---
 
-## 🤝 Contributing
-
-This is an educational assignment. For improvements or suggestions, please create an issue or contact the instructor.
-
----
-
-## 📞 Support
+## Support
 
 For issues or questions:
 1. Check the troubleshooting section above
 2. Review the notebook comments and documentation
 3. Refer to library documentation:
-   - [pypdf Documentation](https://pypdf.readthedocs.io/)
-   - [NLTK Documentation](https://www.nltk.org/)
-   - [scikit-learn Documentation](https://scikit-learn.org/)
+   - pypdf: https://pypdf.readthedocs.io/
+   - NLTK: https://www.nltk.org/
+   - scikit-learn: https://scikit-learn.org/
 
 ---
 
 **Last Updated:** May 16, 2026
 
-**Status:** ✅ Complete and Ready for Submission
+**Status:** Complete and Ready for Submission
